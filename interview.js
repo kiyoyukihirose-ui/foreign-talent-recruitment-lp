@@ -3,8 +3,8 @@ const menuButton = document.querySelector('.menu');
 const globalMenu = document.querySelector('.global-menu');
 
 const menuCopy = {
-  en: { different: 'What Makes This Role Different', expertise: 'Expertise You Can Bring', work: 'What You Will Work On', support: 'Support for Working in Japan', interview: 'Interview', details: 'Job Details', form: 'Application Form', apply: 'Apply Now' },
-  ja: { different: 'この求人の特徴', expertise: '活かせる専門性', work: '仕事内容', support: '日本で働くためのサポート', interview: '外国籍メンバーインタビュー', details: '募集要項', form: '応募フォーム', apply: '応募する' }
+  en: { different: 'What Makes This Role Different', expertise: 'Expertise You Can Bring', work: 'What You Will Work On', support: 'Support for Working in Japan', interview: 'Interview', details: 'View Job Details', apply: 'Apply Now' },
+  ja: { different: 'この求人の特徴', expertise: '活かせる専門性', work: '仕事内容', support: '日本で働くためのサポート', interview: '外国籍メンバーインタビュー', details: '募集要項を見る', apply: '応募する' }
 };
 
 const setMenuOpen = (isOpen) => {

@@ -206,9 +206,8 @@ const translations = [
   ['.global-menu-links a:nth-child(3)', '仕事内容'],
   ['.global-menu-links a:nth-child(4)', '日本で働くためのサポート'],
   ['.global-menu-links a:nth-child(5)', '外国籍メンバーインタビュー'],
-  ['.global-menu-links a:nth-child(6)', '募集要項'],
-  ['.global-menu-links a:nth-child(7)', '応募フォーム'],
-  ['.global-menu-apply', '応募する']
+  ['.global-menu-apply', '応募する'],
+  ['.global-menu-details', '募集要項を見る']
 ];
 
 translations.forEach(([selector]) => {
