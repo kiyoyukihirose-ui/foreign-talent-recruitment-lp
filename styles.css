@@ -44,3 +44,4 @@ h1,h2,h3,p{margin:0}.page h2{font-size:35px;line-height:1.2;font-weight:700;back
 .lang-ja .buyback{top:634px;height:265px}
 .lang-ja .work-outro{top:944px}
 .lang-ja .work{height:1130px}
+.interview-photo{inset:auto;left:-414px;top:-234px;width:1180px;height:788px;background:url("assets/interview-bg-v2.png") center/cover no-repeat;opacity:.2}
