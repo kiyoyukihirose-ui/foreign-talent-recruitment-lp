@@ -2,7 +2,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:linear-gradient(90deg,#4322d5 0%,#372294 100%);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;line-height:1.2}
-.page{width:393px;max-width:100%;margin:0 auto;background:#fff;overflow:hidden;position:relative;box-shadow:0 0 22px rgba(255,255,255,.9)}
+.page{width:393px;max-width:100%;margin:0 auto;background:#fff;overflow:hidden;position:relative;box-shadow:0 0 8px rgba(255,255,255,.32)}
 h1,h2,h3,p{margin:0}.page h2{font-size:35px;line-height:1.2;font-weight:700;background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
 .header{height:67px;background:#fff;position:relative;z-index:3}.logo{position:absolute;left:30px;top:21px;width:93px;height:26px;object-fit:cover}.language{position:absolute;left:233px;top:24px;font:600 16px/20px Inter,sans-serif}.language span{color:#aaa}.language b{color:var(--purple)}
 .menu{position:absolute;left:327px;top:19px;width:36px;height:25px;border:0;background:none;padding:0;display:flex;flex-direction:column;gap:8px}.menu i{height:3px;width:36px;flex:0 0 3px;background:linear-gradient(149.287deg,var(--purple) 4.91%,var(--purple-dark) 95.09%);display:block}
