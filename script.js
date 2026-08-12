@@ -1,7 +1,14 @@
 const menu = document.querySelector('.menu');
 const globalMenu = document.querySelector('.global-menu');
 const floatingCta = document.querySelector('.floating-cta');
+const backToTop = document.querySelector('.to-top');
 floatingCta.classList.add('is-hidden');
+
+backToTop.addEventListener('click', (event) => {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.replaceState(null, '', '#page-top');
+});
 
 const setMenuOpen = (isOpen) => {
   const isJapanese = document.documentElement.lang === 'ja';
