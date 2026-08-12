@@ -43,7 +43,7 @@ h1,h2,p{margin:0}
 .button-primary{border:1px solid #fff;background:var(--gradient);color:#fff}
 .button-light{background:#fff;color:var(--ink)}
 .site-footer{position:relative;width:393px;height:128px;background:#fff}
-.site-footer p{position:absolute;left:29px;top:22px;width:334px;height:17px;margin:0;background:linear-gradient(160deg,var(--purple) 4.91%,var(--purple-dark) 95.09%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-align:center;white-space:nowrap;font:400 14px/normal Inter,sans-serif}
+.site-footer p{position:absolute;left:29px;top:22px;width:334px;height:22px;margin:0;background:linear-gradient(160deg,var(--purple) 4.91%,var(--purple-dark) 95.09%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-align:center;white-space:nowrap;font:400 14px/20px Inter,sans-serif}
 
 .lang-ja .interview-content{height:1263px}
 .lang-ja .interview-content>h1{top:143px}
