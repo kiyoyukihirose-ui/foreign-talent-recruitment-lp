@@ -109,13 +109,13 @@
         <p><span class="form-intro-resume">You will be asked to submit your Resume / CV</span><span> by email after completing this form.</span></p>
       </div>
       <form class="application-form">
-        <div class="basic-field"><label for="full-name">Full Name</label><input id="full-name" name="fullName" type="text" placeholder="Yamada Aria"></div>
-        <div class="basic-field"><label for="email">Email Address</label><input id="email" name="email" type="email" placeholder="sample.aria@gmail.com"></div>
-        <div class="basic-field"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" placeholder="08012345678"></div>
-        <div class="basic-field"><label for="location">Current Location</label><input id="location" name="location" type="text" placeholder="Tokyo, Japan"></div>
+        <div class="basic-field"><label for="full-name">Full Name</label><input id="full-name" name="fullName" type="text" placeholder="Yamada Aria" required></div>
+        <div class="basic-field"><label for="email">Email Address</label><input id="email" name="email" type="email" placeholder="sample.aria@gmail.com" required></div>
+        <div class="basic-field"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" placeholder="08012345678" required></div>
+        <div class="basic-field"><label for="location">Current Location</label><input id="location" name="location" type="text" placeholder="Tokyo, Japan" required></div>
 
         <fieldset class="radio-group residence-options"><legend>Current Status of Residence</legend>
-          <label><input type="radio" name="residence" value="engineer"><span>Engineer / Specialist in Humanities /<br>International Services</span></label>
+          <label><input type="radio" name="residence" value="engineer" required><span>Engineer / Specialist in Humanities /<br>International Services</span></label>
           <label><input type="radio" name="residence" value="highly-skilled"><span>Highly Skilled Professional</span></label>
           <label><input type="radio" name="residence" value="student"><span>Student</span></label>
           <label><input type="radio" name="residence" value="dependent"><span>Dependent</span></label>
@@ -130,7 +130,7 @@
         </div>
 
         <fieldset class="radio-group japanese-options"><legend>Japanese Level</legend>
-          <label><input type="radio" name="japaneseLevel" value="n1"><span>Approximately JLPT N1</span></label>
+          <label><input type="radio" name="japaneseLevel" value="n1" required><span>Approximately JLPT N1</span></label>
           <label><input type="radio" name="japaneseLevel" value="n2"><span>Approximately JLPT N2</span></label>
           <label><input type="radio" name="japaneseLevel" value="n3"><span>Approximately JLPT N3</span></label>
           <label><input type="radio" name="japaneseLevel" value="n4"><span>Approximately JLPT N4</span></label>
@@ -139,7 +139,7 @@
           <small>You do not need to have taken the JLPT or<br>provide a JLPT certificate.</small>
         </fieldset>
 
-        <button class="submit-application" type="button">Submit Application <img src="assets/submit-arrow.svg" alt=""></button>
+        <button class="submit-application" type="submit">Submit Application <img src="assets/submit-arrow.svg" alt=""></button>
         <p class="form-note">After submitting this form, we will send instructions for submitting your Resume / CV to the email address you provided.</p>
       </form>
     </section>
@@ -150,6 +150,6 @@
   </main>
 
   <div class="floating-cta"><a class="button button-primary" href="#form">Apply Now</a><a class="button button-light" href="#job-details">View Job Details</a><a class="to-top" href="#top" aria-label="Back to top">↑</a></div>
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>

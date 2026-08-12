@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARIA | Confirm Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="application-flow.css?v=1">
+</head>
+<body>
+  <main class="flow-page">
+    <header class="header">
+      <a href="index.html#top"><img class="logo" src="assets/logo.png" alt="ARIA"></a>
+      <div class="language" role="group" aria-label="Language selection"><button type="button" data-lang="ja">JP</button><span>｜</span><button type="button" data-lang="en">EN</button></div>
+      <button class="menu" type="button" aria-label="Open menu"><i></i><i></i><i></i></button>
+    </header>
+    <section class="flow-main">
+      <div class="flow-content">
+        <p class="flow-eyebrow" data-copy="eyebrow">APPLICATION</p>
+        <h1 class="flow-title" data-copy="title">Confirm Your<br>Application</h1>
+        <p class="flow-lead" data-copy="lead">Please review the information below before submitting your application.</p>
+        <div class="summary-card">
+          <dl class="summary-list">
+            <div class="summary-row"><dt data-label="fullName">Full Name</dt><dd data-value="fullName">—</dd></div>
+            <div class="summary-row"><dt data-label="email">Email Address</dt><dd data-value="email">—</dd></div>
+            <div class="summary-row"><dt data-label="phone">Phone Number</dt><dd data-value="phone">—</dd></div>
+            <div class="summary-row"><dt data-label="location">Current Location</dt><dd data-value="location">—</dd></div>
+            <div class="summary-row"><dt data-label="residence">Current Status of Residence</dt><dd data-value="residence">—</dd></div>
+            <div class="summary-row"><dt data-label="japaneseLevel">Japanese Level</dt><dd data-value="japaneseLevel">—</dd></div>
+          </dl>
+        </div>
+        <div class="flow-actions"><a class="flow-button flow-button-secondary" href="index.html#form" data-copy="edit">Edit</a><button class="flow-button flow-button-primary" type="button" data-copy="submit">Submit Application</button></div>
+        <p class="flow-note" data-copy="note">Your application is not submitted until you select “Submit Application.”</p>
+      </div>
+    </section>
+    <footer class="site-footer"><p>copyright © 2026 株式会社Aria. all rights reserved.</p></footer>
+  </main>
+  <script src="confirm.js?v=1"></script>
+</body>
+</html>

@@ -33,6 +33,7 @@ applicationForm.addEventListener('change', (event) => {
   const showOtherField = event.target.value === 'other';
   residenceOtherField.hidden = !showOtherField;
   residenceOtherInput.disabled = !showOtherField;
+  residenceOtherInput.required = showOtherField;
   applicationForm.classList.toggle('has-other', showOtherField);
   formSection.classList.toggle('has-other', showOtherField);
 
@@ -46,6 +47,50 @@ applicationForm.addEventListener('change', (event) => {
 });
 
 residenceOtherInput.disabled = true;
+
+const savedApplication = (() => {
+  try {
+    return JSON.parse(sessionStorage.getItem('aria-application') || 'null');
+  } catch (error) {
+    return null;
+  }
+})();
+
+if (savedApplication) {
+  Object.entries(savedApplication).forEach(([name, value]) => {
+    if (name === 'language') return;
+    const field = applicationForm.elements.namedItem(name);
+    if (!field) return;
+    if (field instanceof RadioNodeList) {
+      field.value = value;
+    } else {
+      field.value = value;
+    }
+  });
+
+  if (savedApplication.residence === 'other') {
+    residenceOtherField.hidden = false;
+    residenceOtherInput.disabled = false;
+    residenceOtherInput.required = true;
+    applicationForm.classList.add('has-other');
+    formSection.classList.add('has-other');
+  }
+}
+
+applicationForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  residenceOtherInput.required = applicationForm.elements.residence.value === 'other';
+  if (!applicationForm.reportValidity()) return;
+
+  const application = Object.fromEntries(new FormData(applicationForm).entries());
+  try {
+    application.language = localStorage.getItem('aria-language') || 'en';
+    sessionStorage.setItem('aria-application', JSON.stringify(application));
+  } catch (error) {
+    application.language = 'en';
+  }
+  window.location.href = 'confirm.html';
+});
 
 const languageButtons = document.querySelectorAll('.language button[data-lang]');
 
