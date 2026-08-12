@@ -1,0 +1,54 @@
+:root{--purple:#4322d5;--purple-dark:#372294;--ink:#383838;--gradient:linear-gradient(118deg,var(--purple) 4.91%,var(--purple-dark) 95.09%)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#a3a3a3;color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;line-height:1.2}
+.interview-page{position:relative;width:393px;max-width:100%;margin:0 auto;overflow:hidden;background:#fff}
+h1,h2,p{margin:0}
+.header{position:relative;z-index:3;height:67px;background:#fff}
+.logo{position:absolute;left:30px;top:21px;width:93px;height:26px;object-fit:cover}
+.language{position:absolute;left:233px;top:24px;display:flex;align-items:center;white-space:nowrap;font:600 16px/20px Inter,sans-serif}
+.language button{margin:0;padding:0;border:0;background:none;color:#aaa;font:600 16px/20px Inter,sans-serif;cursor:pointer}
+.language button.is-active{color:var(--purple);font-weight:700}
+.language button:focus-visible{outline:2px solid var(--purple);outline-offset:2px}
+.language span{padding:0 3px;color:#aaa}
+.menu{position:absolute;left:327px;top:19px;width:36px;height:25px;padding:0;border:0;background:none;display:flex;flex-direction:column;gap:8px;cursor:pointer}
+.menu i{display:block;flex:0 0 3px;width:36px;height:3px;background:linear-gradient(149.287deg,var(--purple) 4.91%,var(--purple-dark) 95.09%)}
+
+.interview-content{position:relative;height:1338px;overflow:hidden;background:#fff}
+.interview-hero-art{position:absolute;left:0;top:0;width:393px;height:450px;overflow:hidden;background:linear-gradient(118deg,var(--purple) 4.91%,var(--purple-dark) 95.09%);clip-path:polygon(0 0,100% 0,100% 78.5%,30px 100%,0 76%);pointer-events:none}
+.interview-hero-gradient{display:none}
+.interview-hero-photo{position:absolute;left:-414px;top:-234px;width:1180px;height:788px;background:url("assets/interview-bg-v2.png") center/cover no-repeat;opacity:.2}
+.interview-content>h1{position:absolute;left:42px;top:95px;width:328px;color:#fff;font-size:35px;font-weight:700;line-height:1.2;text-shadow:0 0 4px rgba(0,0,0,.25)}
+.interview-intro{position:absolute;left:42px;top:233px;width:328px;color:#fff;font-size:15px;line-height:18px;text-shadow:0 0 4px rgba(0,0,0,.25)}
+.qa-list{position:absolute;left:30px;top:480px;width:333px;display:flex;flex-direction:column;gap:25px}
+.qa-item{display:flex;flex-direction:column;gap:3px}
+.qa-item h2{display:flex;align-items:center;gap:5px;color:var(--purple);font-size:15px;font-weight:700;line-height:18px}
+.qa-item h2 img{flex:0 0 11px;width:13px;height:11px;transform:rotate(90deg)}
+.qa-item h2 span{width:318px;background:linear-gradient(118deg,var(--purple) 4.91%,var(--purple-dark) 95.09%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.qa-item:first-child h2 span{width:319px}
+.qa-answer{display:flex;gap:5px;margin-top:0}
+.qa-answer>span{flex:0 0 11px}
+.qa-answer p{flex:0 0 auto;width:317px;color:var(--ink);font-size:15px;font-weight:400;line-height:18px}
+.qa-item:nth-child(2) .qa-answer p{width:335px}
+.qa-item:nth-child(3) .qa-answer p{width:318px}
+.qa-item:nth-child(4) .qa-answer p{width:313px}
+.back-link{position:absolute;left:128px;top:1285px;width:138px;height:28px;color:var(--purple);text-decoration:none;font-size:15px;font-weight:700;line-height:18px}
+.back-link .back-arrow{position:absolute;left:0;top:3px;width:13px;height:11px}
+.back-link span{position:absolute;left:15px;top:0;white-space:nowrap}
+.back-link .back-line{position:absolute;left:0;top:18px;width:138px;height:1px}
+
+.interview-cta{height:96px;padding:24px 23px;background:var(--purple)}
+.button-pair{display:flex;width:347px;gap:5px}
+.button{display:flex;align-items:center;justify-content:center;width:171px;height:47px;text-decoration:none;font:600 15px Inter,sans-serif}
+.button-primary{border:1px solid #fff;background:var(--gradient);color:#fff}
+.button-light{background:#fff;color:var(--ink)}
+.site-footer{position:relative;width:393px;height:128px;background:#fff}
+.site-footer p{position:absolute;left:29px;top:22px;width:334px;height:17px;margin:0;background:linear-gradient(160deg,var(--purple) 4.91%,var(--purple-dark) 95.09%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-align:center;white-space:nowrap;font:400 14px/normal Inter,sans-serif}
+
+.lang-ja .interview-content{height:1263px}
+.lang-ja .interview-content>h1{top:143px}
+.lang-ja .back-link{left:122px;top:1205px;width:150px}
+.lang-ja .back-link .back-line{width:150px}
+.lang-ja .button{font-family:Inter,"Noto Sans JP",sans-serif}
+@media(max-width:392px){.interview-page{width:100%}.button-pair{width:calc(100vw - 46px)}.button{width:50%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
