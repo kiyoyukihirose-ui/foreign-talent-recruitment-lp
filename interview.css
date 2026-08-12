@@ -52,5 +52,6 @@ h1,h2,p{margin:0}
 .lang-ja .button{font-family:Inter,"Noto Sans JP",sans-serif}
 @media(max-width:392px){.interview-page{width:393px}.button-pair{width:347px}.button{width:171px}}
 .global-menu-actions{display:flex;gap:5px;width:333px;margin-top:25px}.global-menu-actions .global-menu-apply,.global-menu-details{display:flex;align-items:center;justify-content:center;width:164px;height:47px;margin:0;text-decoration:none;font:700 15px/18px Inter,"Noto Sans JP",sans-serif}.global-menu-actions .global-menu-apply{border:1px solid var(--purple);background:var(--gradient);color:#fff}.global-menu-details{border:1px solid var(--purple);background:#fff;color:var(--ink)}
-.global-menu{height:386px}
+.global-menu{height:401px;box-shadow:0 5px 9px rgba(17,0,94,.18)}
+.menu-backdrop{position:absolute;left:0;top:67px;z-index:24;width:393px;height:calc(100% - 67px);margin:0;padding:0;border:0;background:rgba(67,34,213,.42);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility .2s}.menu-backdrop.is-open{opacity:1;visibility:visible;pointer-events:auto}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

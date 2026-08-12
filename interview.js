@@ -1,6 +1,7 @@
 const languageButtons = document.querySelectorAll('.language button[data-lang]');
 const menuButton = document.querySelector('.menu');
 const globalMenu = document.querySelector('.global-menu');
+const menuBackdrop = document.querySelector('.menu-backdrop');
 
 const menuCopy = {
   en: { different: 'What Makes This Role Different', expertise: 'Expertise You Can Bring', work: 'What You Will Work On', support: 'Support for Working in Japan', interview: 'Interview', details: 'View Job Details', apply: 'Apply Now' },
@@ -13,6 +14,7 @@ const setMenuOpen = (isOpen) => {
   menuButton.setAttribute('aria-label', isJapanese ? (isOpen ? 'メニューを閉じる' : 'メニューを開く') : (isOpen ? 'Close menu' : 'Open menu'));
   globalMenu.classList.toggle('is-open', isOpen);
   globalMenu.setAttribute('aria-hidden', String(!isOpen));
+  menuBackdrop.classList.toggle('is-open', isOpen);
 };
 
 const copy = {
@@ -72,6 +74,7 @@ const setLanguage = (language) => {
 languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
 menuButton.addEventListener('click', () => setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true'));
 globalMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
+menuBackdrop.addEventListener('click', () => setMenuOpen(false));
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
 });

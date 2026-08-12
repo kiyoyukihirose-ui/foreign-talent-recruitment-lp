@@ -1,5 +1,6 @@
 const menu = document.querySelector('.menu');
 const globalMenu = document.querySelector('.global-menu');
+const menuBackdrop = document.querySelector('.menu-backdrop');
 const floatingCta = document.querySelector('.floating-cta');
 const backToTop = document.querySelector('.to-top');
 floatingCta.classList.add('is-hidden');
@@ -16,10 +17,12 @@ const setMenuOpen = (isOpen) => {
   menu.setAttribute('aria-label', isJapanese ? (isOpen ? 'メニューを閉じる' : 'メニューを開く') : (isOpen ? 'Close menu' : 'Open menu'));
   globalMenu.classList.toggle('is-open', isOpen);
   globalMenu.setAttribute('aria-hidden', String(!isOpen));
+  menuBackdrop.classList.toggle('is-open', isOpen);
 };
 
 menu.addEventListener('click', () => setMenuOpen(menu.getAttribute('aria-expanded') !== 'true'));
 globalMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
+menuBackdrop.addEventListener('click', () => setMenuOpen(false));
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
 });
