@@ -13,7 +13,7 @@ const copy = {
     a3: 'I can speak directly with the CEO and business leaders about problems I want to improve and ideas I have.<br>Of course, not every idea is accepted. But if there is a clear reason behind it, people listen seriously. If the idea is good, it can become real work.',
     q4: 'Q4. What has been one of your most memorable experiences at ARIA?',
     a4: 'One of my connections overseas led to an opportunity to work with a company outside Japan.<br>Instead of just discussing the idea, we formed a temporary project team and traveled overseas to move the project forward.<br>If your experience, knowledge, or connections can create value for the company, ARIA is willing to use them and take action. That is one of the things I find interesting about working here.',
-    back: 'Back to top page',
+    back: 'Back to Job Page',
     apply: 'Apply Now',
     details: 'View Job Details'
   },
