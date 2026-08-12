@@ -1,5 +1,19 @@
 const languageButtons = document.querySelectorAll('.language button[data-lang]');
 const menuButton = document.querySelector('.menu');
+const globalMenu = document.querySelector('.global-menu');
+
+const menuCopy = {
+  en: { different: 'What Makes This Role Different', expertise: 'Expertise You Can Bring', work: 'What You Will Work On', support: 'Support for Working in Japan', interview: 'Interview', details: 'Job Details', form: 'Application Form', apply: 'Apply Now' },
+  ja: { different: 'この求人の特徴', expertise: '活かせる専門性', work: '仕事内容', support: '日本で働くためのサポート', interview: '外国籍メンバーインタビュー', details: '募集要項', form: '応募フォーム', apply: '応募する' }
+};
+
+const setMenuOpen = (isOpen) => {
+  const isJapanese = document.documentElement.lang === 'ja';
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+  menuButton.setAttribute('aria-label', isJapanese ? (isOpen ? 'メニューを閉じる' : 'メニューを開く') : (isOpen ? 'Close menu' : 'Open menu'));
+  globalMenu.classList.toggle('is-open', isOpen);
+  globalMenu.setAttribute('aria-hidden', String(!isOpen));
+};
 
 const copy = {
   en: {
@@ -46,14 +60,20 @@ const setLanguage = (language) => {
     button.classList.toggle('is-active', active);
     button.setAttribute('aria-pressed', String(active));
   });
+  document.querySelectorAll('[data-menu-copy]').forEach((element) => {
+    element.textContent = menuCopy[language][element.dataset.menuCopy];
+  });
+  globalMenu.setAttribute('aria-label', language === 'ja' ? 'ページ内ナビゲーション' : 'Page navigation');
+  setMenuOpen(false);
   document.title = language === 'ja' ? 'ARIA | 外国籍メンバーインタビュー' : 'ARIA | Interview with an International Team Member';
   try { localStorage.setItem('aria-language', language); } catch (error) {}
 };
 
 languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
-menuButton.addEventListener('click', () => {
-  const expanded = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!expanded));
+menuButton.addEventListener('click', () => setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true'));
+globalMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenuOpen(false);
 });
 
 let initialLanguage = 'en';
