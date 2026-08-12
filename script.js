@@ -81,11 +81,7 @@ if (savedApplication) {
     if (name === 'language') return;
     const field = applicationForm.elements.namedItem(name);
     if (!field) return;
-    if (field instanceof RadioNodeList) {
-      field.value = value;
-    } else {
-      field.value = value;
-    }
+    field.value = value;
   });
 
   if (savedApplication.residence === 'other') {

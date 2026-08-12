@@ -17,7 +17,7 @@ h1,h2,p{margin:0}
 .interview-content{position:relative;height:1338px;overflow:hidden;background:#fff}
 .interview-hero-art{position:absolute;left:0;top:0;width:393px;height:450px;overflow:hidden;background:linear-gradient(118deg,var(--purple) 4.91%,var(--purple-dark) 95.09%);clip-path:polygon(0 0,100% 0,100% 78.5%,30px 100%,0 76%);pointer-events:none}
 .interview-hero-gradient{display:none}
-.interview-hero-photo{position:absolute;left:-414px;top:-234px;width:1180px;height:788px;background:url("assets/interview-bg-v2.png") center/cover no-repeat;opacity:.2}
+.interview-hero-photo{position:absolute;left:-414px;top:-234px;width:1180px;height:788px;background:url("assets/interview-bg-v2.webp") center/cover no-repeat;opacity:.2}
 .interview-content>h1{position:absolute;left:42px;top:95px;width:328px;color:#fff;font-size:35px;font-weight:700;line-height:1.2;text-shadow:0 0 4px rgba(0,0,0,.25)}
 .interview-intro{position:absolute;left:42px;top:233px;width:328px;color:#fff;font-size:15px;line-height:18px;text-shadow:0 0 4px rgba(0,0,0,.25)}
 .qa-list{position:absolute;left:30px;top:480px;width:333px;display:flex;flex-direction:column;gap:25px}
