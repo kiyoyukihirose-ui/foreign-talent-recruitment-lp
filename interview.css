@@ -1,8 +1,8 @@
 :root{--purple:#4322d5;--purple-dark:#372294;--ink:#383838;--gradient:linear-gradient(118deg,var(--purple) 4.91%,var(--purple-dark) 95.09%)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#a3a3a3;color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;line-height:1.2}
-.interview-page{position:relative;width:393px;max-width:100%;margin:0 auto;overflow:hidden;background:#fff}
+body{margin:0;background:linear-gradient(90deg,#4322d5 0%,#372294 100%);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;line-height:1.2}
+.interview-page{position:relative;width:393px;max-width:100%;margin:0 auto;overflow:hidden;background:#fff;box-shadow:0 0 22px rgba(255,255,255,.9)}
 h1,h2,p{margin:0}
 .header{position:relative;z-index:3;height:67px;background:#fff}
 .logo{position:absolute;left:30px;top:21px;width:93px;height:26px;object-fit:cover}
