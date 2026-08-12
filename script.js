@@ -1,10 +1,20 @@
 const menu = document.querySelector('.menu');
+const globalMenu = document.querySelector('.global-menu');
 const floatingCta = document.querySelector('.floating-cta');
 floatingCta.classList.add('is-hidden');
 
-menu.addEventListener('click', () => {
-  const isOpen = menu.getAttribute('aria-expanded') === 'true';
-  menu.setAttribute('aria-expanded', String(!isOpen));
+const setMenuOpen = (isOpen) => {
+  const isJapanese = document.documentElement.lang === 'ja';
+  menu.setAttribute('aria-expanded', String(isOpen));
+  menu.setAttribute('aria-label', isJapanese ? (isOpen ? 'メニューを閉じる' : 'メニューを開く') : (isOpen ? 'Close menu' : 'Open menu'));
+  globalMenu.classList.toggle('is-open', isOpen);
+  globalMenu.setAttribute('aria-hidden', String(!isOpen));
+};
+
+menu.addEventListener('click', () => setMenuOpen(menu.getAttribute('aria-expanded') !== 'true'));
+globalMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenuOpen(false);
 });
 
 const updateFloatingCta = () => {
@@ -190,7 +200,15 @@ const translations = [
   ['.submit-application', '送信する <img src="assets/submit-arrow.svg" alt="">'],
   ['.form-note', '送信後、入力いただいたメールアドレス宛にResume / CVの提出方法をご案内します。'],
   ['.floating-cta .button-primary', '応募する'],
-  ['.floating-cta .button-light', '募集要項を見る']
+  ['.floating-cta .button-light', '募集要項を見る'],
+  ['.global-menu-links a:nth-child(1)', 'この求人の特徴'],
+  ['.global-menu-links a:nth-child(2)', '活かせる専門性'],
+  ['.global-menu-links a:nth-child(3)', '仕事内容'],
+  ['.global-menu-links a:nth-child(4)', '日本で働くためのサポート'],
+  ['.global-menu-links a:nth-child(5)', '外国籍メンバーインタビュー'],
+  ['.global-menu-links a:nth-child(6)', '募集要項'],
+  ['.global-menu-links a:nth-child(7)', '応募フォーム'],
+  ['.global-menu-apply', '応募する']
 ];
 
 translations.forEach(([selector]) => {
@@ -223,6 +241,8 @@ const setLanguage = (language) => {
 
   document.documentElement.lang = isJapanese ? 'ja' : 'en';
   document.body.classList.toggle('lang-ja', isJapanese);
+  globalMenu.setAttribute('aria-label', isJapanese ? 'ページ内ナビゲーション' : 'Page navigation');
+  menu.setAttribute('aria-label', isJapanese ? (menu.getAttribute('aria-expanded') === 'true' ? 'メニューを閉じる' : 'メニューを開く') : (menu.getAttribute('aria-expanded') === 'true' ? 'Close menu' : 'Open menu'));
   document.title = isJapanese ? 'ARIA｜BI／インターナルコンサルタント採用' : 'ARIA | Business Intelligence / Internal Consulting';
 
   languageButtons.forEach((button) => {

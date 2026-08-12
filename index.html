@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=37">
+  <link rel="stylesheet" href="styles.css?v=38">
 </head>
 <body>
   <main class="page">
@@ -20,6 +20,19 @@
       </div>
       <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
     </header>
+
+    <nav class="global-menu" aria-label="Page navigation" aria-hidden="true">
+      <div class="global-menu-links">
+        <a href="#different">What Makes This Role Different</a>
+        <a href="#expertise">Expertise You Can Bring</a>
+        <a href="#work">What You Will Work On</a>
+        <a href="#support">Support for Working in Japan</a>
+        <a href="#interview">Interview</a>
+        <a href="#job-details">Job Details</a>
+        <a href="#form">Application Form</a>
+      </div>
+      <a class="global-menu-apply" href="#form">Apply Now</a>
+    </nav>
 
     <section class="hero" id="top">
       <div class="hero-photo"></div>
@@ -34,7 +47,7 @@
       </div>
     </section>
 
-    <section class="different">
+    <section class="different" id="different">
       <h2>What Makes<br>This Role Different</h2>
       <div class="difference-photo photo-1"><img src="assets/difference-meeting.png" alt=""></div>
       <div class="difference-photo photo-2"><img src="assets/difference-experience.png" alt=""></div>
@@ -46,7 +59,7 @@
 
     <section class="cta-band"><div class="button-pair"><a class="button button-primary" href="#form">Apply Now</a><a class="button button-light" href="#job-details">View Job Details</a></div></section>
 
-    <section class="expertise">
+    <section class="expertise" id="expertise">
       <h2>Expertise<br>You Can Bring</h2>
       <p class="lead">You do not need expertise in every area.<br>You can start with the experience or expertise you already have and use it to solve business problems.</p>
       <div class="expertise-grid">
@@ -57,7 +70,7 @@
       </div>
     </section>
 
-    <section class="work">
+    <section class="work" id="work">
       <div class="work-photo" aria-hidden="true"></div>
       <div class="work-pattern" aria-hidden="true"></div>
       <h2>What You Will<br>Work On</h2>
@@ -67,7 +80,7 @@
       <p class="work-outro">After joining, you will work with an international team member already at ARIA to identify problems through business data and day to day operations, and improve them.<br><br>You will first work on existing businesses. Based on your results, you may later take part in market analysis and business hypothesis development for new businesses.</p>
     </section>
 
-    <section class="support">
+    <section class="support" id="support">
       <div class="support-photo"></div>
       <h2>Support for<br>Working in Japan</h2>
       <h3 class="japanese">Japanese Language</h3>
@@ -151,6 +164,6 @@
   </main>
 
   <div class="floating-cta"><a class="button button-primary" href="#form">Apply Now</a><a class="button button-light" href="#job-details">View Job Details</a><a class="to-top" href="#page-top" aria-label="Back to top">↑</a></div>
-  <script src="script.js?v=13"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>
